@@ -1,10 +1,8 @@
 Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
 APCS2 pd5
-Plan for 2017/05/19
+Plan for 
 
 Which jobs are most crucial?
-
-
 
 Which components constitute core functionality (vs non-essential)?
 
