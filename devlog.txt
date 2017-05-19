@@ -41,11 +41,18 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
 ==============================================================
 
+2017-05-17
+--------------------------------------------------------------
+Piotr Milewski,
+Edward Mok,
+Levi Olevsky :: Created proposal and submitted for review
+==============================================================
+
 2017-05-18
 --------------------------------------------------------------
-Piotr Milewski :: <Thing member did>
-Edward Mok :: <Thing member did>
-Levi Olevsky :: <Thing member did>
+Piotr Milewski,
+Edward Mok,
+Levi Olevsky :: Created github repository and fixed proposal
 ==============================================================
 
 2017-xx-xx
