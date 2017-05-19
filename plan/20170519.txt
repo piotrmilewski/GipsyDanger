@@ -2,12 +2,18 @@ Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
 APCS2 pd5
 Plan for 2017/05/19
 
-Which jobs are most crucial?
+1. Which jobs are most crucial?
 
+We have a few tasks that we think are important to the development of the game. First, we would have to make sure we can geenrate a map using perlin noise, spawn 1 character and 1 enemy, and make sure that they have attack and HP stats. 
 
+2. Which components constitute core functionality (vs non-essential)?
 
-Which components constitute core functionality (vs non-essential)?
+Attack and HP stats constitute for core functionality, and the character needs to be able to attack the enemy, with the game ending when either of those dies. After we get that to work, we can expand it to stages with more higher stats enemies.
 
-Which components are prerequisites for others?
+3. Which components are prerequisites for others?
 
-Which tasks can be delegated, and which must be collaboratively tackled?
+Experience would be prerequisites for level, and that in turn would be prerequisites for stats changes within a character, as the stats would increase as the player progresses through the game by killing enemies and leveling up. Currency would also be prerequisites for shop items which the player could get items that they have not yet unlocked in the game. 
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+Since only Piotr is familiar with the game, Edwin and Levi should do more research and maybe try getting familiar with the game individually. Then, most of the work can be split between members except for probably the driver since the person working on the driver might not know every aspect of the work done by the other two teammates.
