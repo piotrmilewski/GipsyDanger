@@ -2,10 +2,12 @@ Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
 APCS2 pd5
 Plan for 
 
-Which jobs are most crucial?
+1. Which jobs are most crucial?
 
-Which components constitute core functionality (vs non-essential)?
+2. Which components constitute core functionality (vs non-essential)?
 
-Which components are prerequisites for others?
+3. Which components are prerequisites for others?
 
-Which tasks can be delegated, and which must be collaboratively tackled?
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+5. Addtional Comments:

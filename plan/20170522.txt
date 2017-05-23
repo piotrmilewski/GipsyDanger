@@ -1,11 +1,21 @@
 Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
 APCS2 pd5
-Plan for 2017/05/19
+Plan for 2017/05/22
 
-Which jobs are most crucial?
+1. Which jobs are most crucial?
 
-Which components constitute core functionality (vs non-essential)?
+One of the priorities now is getting perlin noise to work, though we are still unsure of how it functions. 
 
-Which components are prerequisites for others?
+2. Which components constitute core functionality (vs non-essential)?
 
-Which tasks can be delegated, and which must be collaboratively tackled?
+We would need to be able to generate a character and an enemy and allow for combat to happen, simply by using attack() method and reducing opponent's HP.
+
+3. Which components are prerequisites for others?
+
+The components required for the MVP would be prerequisites for others because the functionality can be further expanded after the completion of the MVP.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+Perlin noise would require a group understanding of how it functions, as it is very difficult for one person to try to implement it by himself.
+
+5. Additional Comments:
