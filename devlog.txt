@@ -1,6 +1,6 @@
 GipsyDanger
 Piotr Milewski
-Edward Mok
+Edwin Mok
 Levi Olevsky
 pd 5
 ---------------------
@@ -44,20 +44,34 @@ LESSONS LEARNED
 2017-05-17
 --------------------------------------------------------------
 Piotr Milewski,
-Edward Mok,
+Edwin Mok,
 Levi Olevsky :: Created proposal and submitted for review
 ==============================================================
 
 2017-05-18
 --------------------------------------------------------------
 Piotr Milewski,
-Edward Mok,
+Edwin Mok,
 Levi Olevsky :: Created github repository and fixed proposal
+==============================================================
+
+2017-05-19
+--------------------------------------------------------------
+Piotr Milewski :: Worked on getting perlin noise to generate a map
+Edwin Mok,
+Levi Olevsky :: Worked on creating a UML Diagram for Character interface
+==============================================================
+
+2017-05-22
+--------------------------------------------------------------
+Piotr Milewski :: Did more discovery on perlin noise
+Edwin Mok,
+Levi Olevsky :: Worked more on the UML Diagram, discussed plan and steps required for acquiring MVP
 ==============================================================
 
 2017-xx-xx
 --------------------------------------------------------------
 Piotr Milewski :: <Thing member did>
-Edward Mok :: <Thing member did>
+Edwin Mok :: <Thing member did>
 Levi Olevsky :: <Thing member did>
 ==============================================================
