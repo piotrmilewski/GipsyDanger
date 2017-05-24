@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 
+
+1. Which jobs are most crucial?
+
+We need to get the MVP to work, but perlin noise still prove to be confusing to understand and implement, though the other classes should not be a problem.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+It is the same as yesterday's.
+
+3. Which components are prerequisites for others?
+
+It is the same as yesterday's, priority is to get MVP to work before moving onto more advanced implementations.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+All members can work on getting at least the MVP to work, as communication is key while we are all present in class.
+
+5. Addtional Comments:

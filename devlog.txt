@@ -69,6 +69,21 @@ Edwin Mok,
 Levi Olevsky :: Worked more on the UML Diagram, discussed plan and steps required for acquiring MVP
 ==============================================================
 
+2017-05-23
+--------------------------------------------------------------
+Piotr Milewski,
+Edwin Mok :: Worked on creating a flowchart for the general idea of the game
+Levi Olevsky :: Worked on the UML Diagram for Heroes superclass
+==============================================================
+
+2017-05-24
+--------------------------------------------------------------
+Piotr Milewski :: Worked on getting perlin noise to work
+Edwin Mok,
+Levi Olevsky :: Worked on the driver and Heroes superclass
+==============================================================
+
+
 2017-xx-xx
 --------------------------------------------------------------
 Piotr Milewski :: <Thing member did>

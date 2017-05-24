@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 
+
+1. Which jobs are most crucial?
+
+We would need to start defining the heroes classes and setup the driver to work towards our MVP.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+It is the same as yesterday's, we would need to be able to spawn one hero and one enemy and allow them to attack each other.
+
+3. Which components are prerequisites for others?
+
+It is the same as yesterday's. We would need to get the MVP to work before moving forward to further complicated matters.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+Since Piotr was out, he can do more exploration on perlin noise and hopefully get it to work, and Edwin and Levi can work on the driver and the heroes classes.
+
+5. Addtional Comments:
