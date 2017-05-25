@@ -1,7 +1,7 @@
 public class Heroes {
 
-  private int xcor;
-  private int ycor;
+  protected int xcor;
+  protected int ycor;
 
   public Heroes() {
     xcor = 25;
@@ -20,16 +20,22 @@ public class Heroes {
 
   public void moveHero() {
     if (keyPressed) {
-      if (key == 'W' || key == 'w') {
-        ycor -= 25;
+      if (ycor > 25 && (key == 'W' || key == 'w')) {
+        ycor -= 50;
+        keyPressed = false;
       }
-      if (key == 'A' || key == 'a') {
-        xcor -= 25;
+      if (xcor > 25 && (key == 'A' || key == 'a')) {
+        xcor -= 50;
+        keyPressed = false;
       }
-      if (key == 'S' || key == 's') {
-        ycor += 25;
+      if (ycor < 775 && (key == 'S' || key == 's')) {
+        ycor += 50;
+        keyPressed = false;
       }
-      if (key == 'D' || key == 'd') {
-        xcor += 25;
+      if (xcor < 775 && (key == 'D' || key == 'd')) {
+        xcor += 50;
+        keyPressed = false;
       }
     }
+  }
+}
