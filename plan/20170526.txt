@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 5-26-17
+
+1. Which jobs are most crucial?
+
+Since we now have the flowchart and the UML diagram, and a more general understanding of the core functionalities of our game, we need to work towards getting our MVP to work and move onto more complex implementations from there.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+Attack(), HP, and move() would constitute for core functionality, as we need to have a hero and an enemy that can move and attack each other.
+
+3. Which components are prerequisites for others?
+
+The components in the MVP are prerequisites for others because it allows for further advancements for the project in terms of complex implementations.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+Piotr is planning to keep working on getting perlin noise to work, while Levi and Edwin will be working on the Driver class of the game, Superclass, and Subclasses for the characters.
+
+5. Addtional Comments:
