@@ -1,5 +1,5 @@
 Heroes dunce = new Heroes(75, 75);
-Enemy intelligent = new Enemy(575,575);
+Enemy intelligent = new Enemy(575, 575);
 
 void setup() {
   size(800, 800); 
@@ -28,7 +28,14 @@ void draw() {
   }
   fill(255);
   dunce.summonHero();
-  dunce.moveHero();
   intelligent.summonHero();
-  dunce.moveHero();
+  if (dunce.moves > 0) {
+    dunce.moveHero();
+    intelligent.resetMoves();
+  } else {
+    while (intelligent.moves > 0){
+    intelligent.moveHero();
+    }
+    dunce.resetMoves();
+  }
 }

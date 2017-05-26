@@ -4,16 +4,17 @@ public class Enemy extends Heroes {
     xcor = x;
     ycor = y;
   }
-  
+
   public void summonHero() {
-     fill(255,0,0);
+    fill(255, 0, 0);
     ellipse(xcor, ycor, 50, 50);
-   
+    delay(1000);
   }
 
   public void moveHero() {
-      double moveThere = Math.random()*4;
-      System.out.print(moveThere);
+    int moveThere = (int)(Math.random()*4);
+    
+    if ( moves > 0) {
       if (ycor > 25 && moveThere == 0) {
         ycor -= 50;
       }
@@ -25,6 +26,8 @@ public class Enemy extends Heroes {
       }
       if (xcor < 775 &&  moveThere == 3) {
         xcor += 50;
+      }
     }
+    moves--;
   }
 }
