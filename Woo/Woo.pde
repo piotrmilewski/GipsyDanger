@@ -1,9 +1,9 @@
 Heroes dunce = new Heroes(75, 75);
 Enemy intelligent = new Enemy(575, 575);
+Map _Map = new Map();
 
 void setup() {
   size(800, 800); 
-  background(0);
   dunce.summonHero();
 
   int grid = 50; // change this number to 20 or 50, etc., if you want fewer grid lines
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+  _Map.refresh();
   int grid = 50; // change this number to 20 or 50, etc., if you want fewer grid lines
   stroke(255);
   for (int i = 0; i < width; i+=grid) {

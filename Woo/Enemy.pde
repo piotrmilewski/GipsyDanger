@@ -8,7 +8,7 @@ public class Enemy extends Heroes {
   public void summonHero() {
     fill(255, 0, 0);
     ellipse(xcor, ycor, 50, 50);
-    delay(1000);
+    delay(10);
   }
 
   public void moveHero() {
