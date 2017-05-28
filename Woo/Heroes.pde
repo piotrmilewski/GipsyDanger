@@ -60,12 +60,12 @@ public void resetMoves(){
           moves--;
           keyPressed = false;
         }
-        if (ycor < 775 && (key == 'S' || key == 's')) {
+        if (ycor < (height - 26) && (key == 'S' || key == 's')) {
           ycor += 50;
           moves--;
           keyPressed = false;
         }
-        if (xcor < 775 && (key == 'D' || key == 'd')) {
+        if (xcor < (width - 26) && (key == 'D' || key == 'd')) {
           xcor += 50;
           moves--;
           keyPressed = false;

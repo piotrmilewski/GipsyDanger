@@ -8,7 +8,7 @@ public class Enemy extends Heroes {
   public void summonHero() {
     fill(255, 0, 0);
     ellipse(xcor, ycor, 50, 50);
-    delay(10);
+    delay(1);
   }
 
   public void moveHero() {
@@ -21,10 +21,10 @@ public class Enemy extends Heroes {
       if (xcor > 25 && moveThere == 1) {
         xcor -= 50;
       }
-      if (ycor < 775 &&  moveThere == 2) {
+      if (ycor < (height - 26) &&  moveThere == 2) {
         ycor += 50;
       }
-      if (xcor < 775 &&  moveThere == 3) {
+      if (xcor < (width - 26) &&  moveThere == 3) {
         xcor += 50;
       }
     }

@@ -1,10 +1,13 @@
 public class Map {
 
   float increment = 0.02;
+  
+  Map( int seed ){
+    setup( seed);
+  }
 
-  void setup() { //add "int seed" as a parameter after adding into woo
-    size(801, 801);
-    //noiseSeed(seed); uncomment after adding to Woo
+  void setup(int seed) { //add "int seed" as a parameter after adding into woo
+    noiseSeed(seed); //uncomment after adding to Woo
     noiseSeed(0);
     noiseDetail(5, 0.6);
   }
