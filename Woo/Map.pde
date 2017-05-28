@@ -16,7 +16,7 @@ public class Map {
     loadPixels();
 
     float yoff = 0.0;
-    for (int y = 0; y < width * (height); y++) {
+    for (int y = 0; y < (width * height) - 321201; y++) {
       yoff += increment;
       float xoff = 0.0;
       for (int x = 0; x < width; x++) {
@@ -31,10 +31,12 @@ public class Map {
     updatePixels();
     int grid = 50; // change this number to 20 or 50, etc., if you want fewer grid lines
     stroke(255);
+    //vertical lines
     for (int i = 0; i < width; i+=grid) {
-      line (i, 0, i, height);
+      line (i, 0, i, height-401);
     }
-    for (int i = 0; i < height; i+=grid) {
+    //horizontal lines
+    for (int i = 0; i < height-400; i+=grid) {
       line (0, i, width, i);
     }
     fill(255);
