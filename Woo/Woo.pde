@@ -10,15 +10,20 @@ void setup() {
 
 void draw() {
   _Map.refresh();
+
   dunce.summonHero();
   intelligent.summonHero();
   if (dunce.moves > 0) {
     dunce.moveHero();
-    intelligent.resetMoves();
-  } else {
-    while (intelligent.moves > 0){
+  }
+  if (intelligent.moves > 0 && dunce.moves == 0) {
     intelligent.moveHero();
-    }
+  }
+  if (intelligent.moves == 0 && dunce.moves == 0) {
+    intelligent.resetMoves();  
     dunce.resetMoves();
   }
+  System.out.println("dunce: " + dunce.adjXcor + " " +  dunce.adjYcor);
+  System.out.println("intelligent: " + intelligent.adjXcor + " " +  intelligent.adjYcor);
+  System.out.println(dunce.interact(intelligent));
 }

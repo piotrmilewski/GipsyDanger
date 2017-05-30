@@ -3,6 +3,10 @@ public class Heroes {
   //Data
   protected int xcor;
   protected int ycor;
+
+  protected int adjXcor;
+  protected int adjYcor;
+
   protected int moves;
   protected boolean alive;
 
@@ -27,6 +31,10 @@ public class Heroes {
   public Heroes() {
     xcor = 25;
     ycor = 25;
+
+    adjXcor = xcor/50;
+    adjYcor = ycor/50;
+
     alive = true;
     moves = 5;
   }
@@ -34,13 +42,17 @@ public class Heroes {
   public Heroes(int x, int y) {
     xcor = x;
     ycor = y;
+
+    adjXcor = xcor/50;
+    adjYcor = ycor/50;
+
     moves = 5;
     alive = true;
   }
 
-public void resetMoves(){
-   moves = 5; 
-}
+  public void resetMoves() {
+    moves = 5;
+  }
 
   public void summonHero() {
     ellipse(xcor, ycor, 50, 50);
@@ -52,25 +64,34 @@ public void resetMoves(){
       if (keyPressed) {
         if (ycor > 25 && (key == 'W' || key == 'w')) {
           ycor -= 50;
+          adjYcor--; 
           moves--;
           keyPressed = false;
         }
         if (xcor > 25 && (key == 'A' || key == 'a')) {
           xcor -= 50;
+          adjXcor--; 
           moves--;
           keyPressed = false;
         }
-        if (ycor < (height - 26) && (key == 'S' || key == 's')) {
+        if (ycor < (height - 426) && (key == 'S' || key == 's')) {
           ycor += 50;
+          adjYcor++; 
           moves--;
           keyPressed = false;
         }
         if (xcor < (width - 26) && (key == 'D' || key == 'd')) {
           xcor += 50;
+          adjXcor++; 
           moves--;
           keyPressed = false;
         }
       }
     }
   }
+  
+  public boolean interact(Heroes hero){
+    return dist(this.adjXcor, this.adjYcor, hero.adjXcor, hero.adjYcor) == 1;
+  }
+  
 }
