@@ -17,7 +17,7 @@ void draw() {
     dunce.moveHero();
   }
   if (intelligent.moves > 0 && dunce.moves == 0) {
-    intelligent.moveHero();
+    intelligent.trackHero(dunce);
   }
   if (intelligent.moves == 0 && dunce.moves == 0) {
     intelligent.resetMoves();  
@@ -25,5 +25,5 @@ void draw() {
   }
   System.out.println("dunce: " + dunce.adjXcor + " " +  dunce.adjYcor);
   System.out.println("intelligent: " + intelligent.adjXcor + " " +  intelligent.adjYcor);
-  System.out.println(dunce.interact(intelligent));
+//  System.out.println(dunce.interact(intelligent));
 }
