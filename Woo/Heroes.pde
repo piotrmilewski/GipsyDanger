@@ -55,8 +55,8 @@ public class Heroes {
   }
 
   public void summonHero() {
+    fill(255);
     ellipse(xcor, ycor, 50, 50);
-    fill(0);
   }
 
   /*   
@@ -110,7 +110,7 @@ public class Heroes {
   }
 
   /*
-check if this hero can interact with another hero
+   check if this hero can interact with another hero
    if this hero is adjacent to another hero, 
    then this hero can interact with the other hero
    */
