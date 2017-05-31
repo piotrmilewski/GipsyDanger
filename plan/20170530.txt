@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 5-30-17
+
+1. Which jobs are most crucial?
+
+As of now, since we got the map generated using noise() and characters to spawn on the map, we now need to somehow get the characters to interact with each other based on their range in relative to each other.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+In order to account for interaction, we need a way to test out whether or not they are within a certain distance apart, which will make most sense if we use a boolean to keep track of whether interaction is possible after every move. 
+
+3. Which components are prerequisites for others?
+
+The boolean interact would allow for interaction specifications to be implemented within each hero class. 
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+This task would work best if it were to be a group collaborative effort, since Piotr knows more about the game than Levi and Edwin, and Levi and Edwin can continue working on their previously established code in the driver and heroes classes. 
+
+5. Addtional Comments:

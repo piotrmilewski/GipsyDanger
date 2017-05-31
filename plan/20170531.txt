@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 05-31-17
+
+1. Which jobs are most crucial?
+
+Since we got the interact boolean down, it would be most crucial to determine what kind of interactions will happen for which character, since different characters have different roles in the game. 
+
+2. Which components constitute core functionality (vs non-essential)?
+
+A character would need to define its own objective and role in the game (such as heal for healer and attack for warrior), then it can be used to define how the characters will interact.
+
+3. Which components are prerequisites for others?
+
+Each character's own role would be prerequisites for determining how each characters interact with each other.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+The task of defining each character's tasks can be split up since there are many different characters. Then, our team can come together to define how to implement interaction in the driver class. 
+
+5. Addtional Comments:
