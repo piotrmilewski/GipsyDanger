@@ -11,9 +11,10 @@ public class Heroes {
   protected boolean alive; 
 
   //Stats
-  /*protected int lvl;
+  protected int lvl;
    protected int exp;
    protected int hp;
+   protected int hpCap;
    protected int atk;
    protected int def;
    protected float hit;
@@ -25,7 +26,7 @@ public class Heroes {
    protected float skill;
    protected float speed;
    protected float luck;
-   */
+   
 
 
   public Heroes() {
@@ -37,9 +38,25 @@ public class Heroes {
 
     alive = true;
     moves = 5;
+    
+    //Instantiate stats
+    lvl = 0;
+    exp = 0;
+    hp = 10;
+    atk = 10;
+    def = 10;
+    hit = 0.5;
+    crit = 0.1;
+    avo = 0.5;
+    str = 10;
+    res = 10;
+    mag = 10;
+    skill = 0.01;
+    speed = 0.01;
+    luck = 0.01;
   }
 
-  public Heroes(int x, int y) {
+  public Heroes(int x, int y, int type) {
     xcor = x;
     ycor = y;
 
@@ -48,6 +65,66 @@ public class Heroes {
 
     moves = 5;
     alive = true;
+    
+    //Instantiate stats
+    
+    //Lord (1)
+    if (type == 1){
+    lvl = 1;
+    exp = 0;
+    hp = 18;
+    hpCap = 18;
+    atk = 6;
+    def = 7;
+    hit = 0.9;
+    crit = 0.2;
+    avo = 0.5;
+    str = 6;
+    res = 0;
+    mag = 0;
+    skill = 5;
+    speed = 6;
+    luck = 0;
+    }
+    
+    //Tactician (2)
+    if (type == 2){
+    lvl = 1;
+    exp = 0;
+    hp = 16;
+    hpCap = 16;
+    atk = 4;
+    def = 5;
+    hit = 0.9;
+    crit = 0.2;
+    avo = 0.5;
+    str = 4;
+    res = 3;
+    mag = 0;
+    skill = 5;
+    speed = 5;
+    luck = 0;
+    }
+    
+    //Cavelier (3)
+    if (type == 3){
+    lvl = 1;
+    exp = 0;
+    hp = 18;
+    hpCap = 18;
+    atk = 6;
+    def = 7;
+    hit = 0.9;
+    crit = 0.2;
+    avo = 0.5;
+    str = 6;
+    res = 0;
+    mag = 0;
+    skill = 5;
+    speed = 6;
+    luck = 0;
+    }
+    
   }
 
   public void resetMoves() {
