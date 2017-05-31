@@ -31,4 +31,5 @@ $ cd GipsyDanger/Woo/
 $ processing Woo.pde &
 ```
 **Step 4:** Once in Woo.pde via Processing, run the code using Ctrl + R
+
 **Step 5:** Enjoy the game!
