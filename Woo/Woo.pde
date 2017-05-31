@@ -11,17 +11,24 @@ void setup() {
 void draw() {
   _Map.refresh();
 
+//create one hero and one enemy
   dunce.summonHero();
   intelligent.summonHero();
+  
+  //check if hero can still move
   if (dunce.moves > 0) {
-    dunce.moveHero();
+    dunce.moveHero(); //move hero
   }
+  
+  //check if hero's turn is over and if enemy can still move
   if (intelligent.moves > 0 && dunce.moves == 0) {
-    intelligent.trackHero(dunce);
+    intelligent.trackHero(dunce); //enemy moves towards hero
   }
+  
+  //check if hero and enemy are done with their turns
   if (intelligent.moves == 0 && dunce.moves == 0) {
-    intelligent.resetMoves();  
-    dunce.resetMoves();
+    intelligent.resetMoves(); //reset enemy turn
+    dunce.resetMoves(); //reset hero turn
   }
   System.out.println("dunce: " + dunce.adjXcor + " " +  dunce.adjYcor);
   System.out.println("intelligent: " + intelligent.adjXcor + " " +  intelligent.adjYcor);
