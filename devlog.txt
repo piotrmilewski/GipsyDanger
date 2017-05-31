@@ -99,8 +99,16 @@ Levi Olevsky :: Worked on the driver and README.md
 
 2017-05-30
 --------------------------------------------------------------
+Piotr Milewski :: Worked on the map and stats display screen
+Edwin Mok,
+Levi Olevsky :: Worked on getting the characters to interact with each other within a certain range of one another
+==============================================================
+
+2017-05-31
+--------------------------------------------------------------
 Piotr Milewski :: <Thing member did>
 Edwin Mok :: <Thing member did>
 Levi Olevsky :: <Thing member did>
 ==============================================================
+
 
