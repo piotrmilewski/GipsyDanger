@@ -5,7 +5,11 @@ Heroes player2 = new Heroes(25, 25, 1);
 Heroes player3 = new Heroes(75, 25, 1);
 Heroes player4 = new Heroes(25, 75, 1);
 
-Enemy enemy1 = new Enemy(375, 375);
+Enemy enemy1 = new Enemy(575, 375);
+Enemy enemy2 = new Enemy(525, 375);
+Enemy enemy3 = new Enemy(575, 325);
+Enemy enemy4 = new Enemy(525, 325);
+
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
@@ -22,6 +26,10 @@ void setup() {
   allPlayers.add(player4);
 
   allEnemies.add(enemy1);
+    allEnemies.add(enemy2);
+  allEnemies.add(enemy3);
+  allEnemies.add(enemy4);
+
 }
 
 void draw() {
@@ -42,11 +50,12 @@ void draw() {
   }
 
   //create one hero and one enemy
-  player1.summonHero();
-  player2.summonHero();
-  player3.summonHero();
-  player4.summonHero();
-  enemy1.summonHero();
+  for(Heroes player: allPlayers){
+     player.summonHero(); 
+  }
+  for(Heroes enemy: allEnemies){
+     enemy.summonHero(); 
+  }
 
   if (curPlayer != null) {
     //~~Player's turn~~\\
