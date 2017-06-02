@@ -79,6 +79,10 @@ public class Map {
     text("177", 740, 628);
     text("177", 740, 662);
     text("177", 740, 696);
+    //name
+    textSize(26);
+    fill(255);
+    text("Levi", 390, 430);
   }
 
 }
