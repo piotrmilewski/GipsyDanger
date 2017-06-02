@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 06-01-17
+
+1. Which jobs are most crucial?
+
+We would need to instantiate stats for characters, as well as allow for characters to get into combat with each other as they interact
+
+2. Which components constitute core functionality (vs non-essential)?
+
+Allowing for characters to get into combat would be the core functionality since our MVP would at least have to allow for two characters to battle each other. 
+
+3. Which components are prerequisites for others?
+
+Instantiating stats for characters will be prerequisites for combat because there will be formulas to determine how the characters will attack.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+We can split the roles to instantiate character stats, and working on the driver, since then we would not have merge conflicts and we can use our time more wisely.
+
+5. Addtional Comments:

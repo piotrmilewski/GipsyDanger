@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 06-02-17
+
+1. Which jobs are most crucial?
+
+For now, the most crucial job is to allow for combat within characters.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+The formulas to determine combat stats would account for core functionality.
+
+3. Which components are prerequisites for others?
+
+The characters' stats will be prerequisites to determine combat stats, which will in turn be used to allow for combat within characters.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+We can split up work by working on different classes so we will not run into merge conflicts.
+
+5. Addtional Comments:

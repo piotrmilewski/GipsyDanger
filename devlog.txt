@@ -106,9 +106,29 @@ Levi Olevsky :: Worked on getting the characters to interact with each other wit
 
 2017-05-31
 --------------------------------------------------------------
+Piotr Milewski :: Worked on displaying the stats on the display screen
+Edwin Mok :: Worked on instantiating different characters and their stats
+Levi Olevsky :: Worked on a smarter way of enemy AI instead of moving in random directions
+==============================================================
+
+2017-06-01
+--------------------------------------------------------------
+Piotr Milewski :: Worked on displaying the stats on the display screen
+Edwin Mok :: Worked on instantiating different characters and their stats
+Levi Olevsky :: Worked on player selection based on mouseclick
+==============================================================
+
+2017-06-02
+--------------------------------------------------------------
+Piotr Milewski :: Fixing heroes and some driver file issues
+Edwin Mok,
+Levi Olevsky :: Brush up repo to make sure our project is in compliance
+==============================================================
+
+2017-06-xx
+--------------------------------------------------------------
 Piotr Milewski :: <Thing member did>
 Edwin Mok :: <Thing member did>
 Levi Olevsky :: <Thing member did>
 ==============================================================
-
 
