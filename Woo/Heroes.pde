@@ -125,6 +125,132 @@ public class Heroes {
     luck = 0;
     }
     
+    //Knight (4)
+    if (type == 4) {
+      hp = 18;
+      hpCap = 18;
+      def = 11;
+      str = 8;
+      res = 0;
+      mag = 0;
+      skill = 4;
+      speed = 4;
+      luck = 0;
+    }
+    
+    //Myrmidon (5)
+    if (type == 5){
+      hp = 16;
+      hpCap = 16;
+      def = 4;
+      str = 4;
+      res = 1;
+      mag = 1;
+      skill = 9;
+      speed = 10;
+      luck = 0;
+    }
+    
+    //Thief (6)
+    if (type == 6){
+      hp = 16;
+      hpCap = 16;
+      def = 2;
+      str = 3;
+      res = 0;
+      mag = 0;
+      skill = 6;
+      speed = 8;
+      luck = 0;
+    }
+    
+    //Fighter (7)
+    if (type == 7){
+      hp = 20;
+      hpCap = 20;
+      def = 4;
+      str = 8;
+      res = 0;
+      mag = 0;
+      skill = 5;
+      speed = 5;
+      luck = 0;
+    }
+    
+    //Mercenary (8)
+    if (type == 8){
+      hp = 18;
+      hpCap = 18;
+      def = 5;
+      str = 5;
+      res = 0;
+      mag = 0;
+      skill = 8;
+      speed = 7;
+      luck = 0;
+    }
+    
+    //Archer (9)
+    if (type == 9){
+      hp = 16;
+      hpCap = 16;
+      def = 5;
+      str = 5;
+      res = 0;
+      mag = 0;
+      skill = 8;
+      speed = 6;
+      luck = 0;
+    }
+    
+    //Mage (10)
+    if (type == 10){
+      hp = 16;
+      hpCap = 16;
+      def = 0;
+      str = 0;
+      res = 3;
+      mag = 4;
+      skill = 3;
+      speed = 4;
+      luck = 0;
+    }
+  }
+  
+  public int getHp(){
+    return hp; 
+  }
+  
+  public int getHpCap(){
+    return hpCap;
+  }
+  
+  public int getDef(){
+    return def;
+  }
+  
+  public int getStr(){
+    return str;
+  }
+  
+  public int getRes(){
+    return res;
+  }
+  
+  public int getMag(){
+    return mag;
+  }
+  
+  public float getSkill(){
+    return skill; 
+  }
+  
+  public float getSpeed(){
+    return speed;
+  }
+  
+  public float getLuck(){
+    return luck;
   }
 
   public void resetMoves() {
