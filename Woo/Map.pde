@@ -49,40 +49,41 @@ public class Map {
   void printStats() { //add argument Heroes Hero after testing
     textSize(22);
     fill(0);
-    //left stats (Str, Mag, Skill, Spd, Lck, Def, Res
-    text("177", 290, 560); //change 177 with Hero.getAccordingValue()
-    text("177", 290, 590); //EVERY 177 IS A PLACEHOLDER
-    text("177", 290, 620);
-    text("177", 290, 650);
-    text("177", 290, 680);
-    text("177", 290, 710);
-    text("177", 290, 740);
-    //upper stats
-    text("177", 425, 495);
-    text("177", 550, 495);
-    text("177" + "/" + "177", 450, 522);
-    //upper right stats
-    text("177", 685, 430);
-    text("177", 685, 460);
-    text("177", 685, 490);
-    text("177", 685, 520);
-    text("17", 749, 528);
-    //weapon containment
-    text("177", 410, 560);
-    text("177", 410, 594);
-    text("177", 410, 628);
-    text("177", 410, 662);
-    text("177", 410, 696);   
-    //weapon durability
-    text("177", 740, 560);
-    text("177", 740, 594);
-    text("177", 740, 628);
-    text("177", 740, 662);
-    text("177", 740, 696);
-    //name
-    textSize(26);
-    fill(255);
-    text("Levi", 390, 430);
+    if (curPlayer != null) {
+      //left stats (Str, Mag, Skill, Spd, Lck, Def, Res
+      text(curPlayer.getStr(), 290, 560); //change 177 with Hero.getAccordingValue()
+      text(curPlayer.getMag(), 290, 590); //EVERY 177 IS A PLACEHOLDER
+      text(curPlayer.getSkill(), 290, 620);
+      text(curPlayer.getSpeed(), 290, 650);
+      text(curPlayer.getLuck(), 290, 680);
+      text(curPlayer.getDef(), 290, 710);
+      text(curPlayer.getRes(), 290, 740);
+      //upper stats
+      text(curPlayer.getLevel(), 425, 495);
+      text(curPlayer.getExp(), 550, 495);
+      text(curPlayer.getHp() + "/" + curPlayer.getHpCap(), 450, 522);
+      //upper right stats
+      text(curPlayer.getAtk(), 665, 430);
+      text(curPlayer.getHit(), 665, 460);
+      text(curPlayer.getCrit(), 665, 490);
+      text(curPlayer.getAvo(), 665, 520);
+      text("17", 749, 528);
+      //weapon containment
+      text("177", 410, 560);
+      text("177", 410, 594);
+      text("177", 410, 628);
+      text("177", 410, 662);
+      text("177", 410, 696);   
+      //weapon durability
+      text("177", 740, 560);
+      text("177", 740, 594);
+      text("177", 740, 628);
+      text("177", 740, 662);
+      text("177", 740, 696);
+      //name
+      textSize(26);
+      fill(255);
+      text("Levi", 390, 430);
+    }
   }
-
 }

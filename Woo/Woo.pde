@@ -26,10 +26,9 @@ void setup() {
   allPlayers.add(player4);
 
   allEnemies.add(enemy1);
-    allEnemies.add(enemy2);
+  allEnemies.add(enemy2);
   allEnemies.add(enemy3);
   allEnemies.add(enemy4);
-
 }
 
 void draw() {
@@ -42,7 +41,7 @@ void draw() {
     //System.out.println("Mouse: " + adjMouseXcor + " " + adjMouseYcor);
 
     for (int i = 0; i < allPlayers.size(); i++) {
-      
+
       if (allPlayers.get(i).adjXcor == adjMouseXcor && allPlayers.get(i).adjYcor == adjMouseYcor) {
         curPlayer = allPlayers.get(i);
       }
@@ -50,11 +49,11 @@ void draw() {
   }
 
   //create one hero and one enemy
-  for(Heroes player: allPlayers){
-     player.summonHero(); 
+  for (Heroes player : allPlayers) {
+    player.summonHero();
   }
-  for(Heroes enemy: allEnemies){
-     enemy.summonHero(); 
+  for (Heroes enemy : allEnemies) {
+    enemy.summonHero();
   }
 
   if (curPlayer != null) {
@@ -64,6 +63,12 @@ void draw() {
       //check if hero can still move
       if (curPlayer.moves > 0) {
         curPlayer.moveHero(); //move hero
+        for (int x = 0; x < allEnemies.size(); x++){
+            if (curPlayer.interact(allEnemies.get(x))){
+               curPlayer.attack(allEnemies.get(x)); 
+               break;
+            }
+        }
       }
 
       //End player turn and start enemy turn
@@ -85,6 +90,7 @@ void draw() {
       //Tell enemy to stop moving
       if (enemy1.interact(curPlayer)) {
         enemy1.moves = 0;
+        enemy1.attack(curPlayer);
       }
 
       //End enemy turn and start player turn

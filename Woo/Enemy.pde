@@ -6,6 +6,23 @@ public class Enemy extends Heroes {
 
     adjXcor = x/50;
     adjYcor = y/50;
+    
+    lvl = 1;
+    exp = 0;
+    hp = 10;
+    hpCap = 10;
+    str = 5;
+    mag = 0;
+    skill = 5;
+    speed = 2;
+    luck = 0;
+    def = 5;
+    res = 0;
+    
+    atk = str;
+    hit = ((skill*3)+luck)/2;
+    crit = (skill/2);
+    avo = ((speed*3)+luck)/2;
   }
 
   public void summonHero() {
