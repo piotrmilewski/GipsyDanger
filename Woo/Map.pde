@@ -44,9 +44,27 @@ public class Map {
     img = loadImage("menu.JPG");
     image(img, 201, 401, 601, 401);
     printStats();
+    sideMenu();
+  }
+  
+  void sideMenu() {
+    int grid = 80;
+    stroke(255);
+    //horizontal lines
+    for (int i = 481; i < height; i+=grid) {
+      line (0, i-1, width-601, i-1);
+      line (0, i, width-601, i);
+      line (0, i+1, width-601, i+1);
+    }
+    textSize(30);
+    fill(255);
+    text("Swap\nPlaces", 40, 428);
+    text("Danger\nZone", 40, 509);
+    text("End\nTurn", 40, 590);
+    text("Surrender", 40, 691);
   }
 
-  void printStats() { //add argument Heroes Hero after testing
+  void printStats() {
     textSize(22);
     fill(0);
     if (curPlayer != null) {
@@ -63,10 +81,10 @@ public class Map {
       text(curPlayer.getExp(), 550, 495);
       text(curPlayer.getHp() + "/" + curPlayer.getHpCap(), 450, 522);
       //upper right stats
-      text(curPlayer.getAtk(), 665, 430);
-      text(curPlayer.getHit(), 665, 460);
-      text(curPlayer.getCrit(), 665, 490);
-      text(curPlayer.getAvo(), 665, 520);
+      text((int)curPlayer.getAtk(), 695, 430);
+      text((int)curPlayer.getHit(), 695, 460);
+      text((int)curPlayer.getCrit(), 695, 490);
+      text((int)curPlayer.getAvo(), 695, 520);
       text("17", 749, 528);
       //weapon containment
       text("177", 410, 560);

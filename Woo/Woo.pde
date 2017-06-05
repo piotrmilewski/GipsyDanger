@@ -18,7 +18,7 @@ ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
 
 
 void setup() {
-  background(0);
+  background(15,135,71);
   size(801, 801);
   allPlayers.add(player1);
   allPlayers.add(player2);
