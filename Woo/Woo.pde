@@ -18,7 +18,7 @@ ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
 
 
 void setup() {
-  background(15,135,71);
+  background(15, 135, 71);
   size(801, 801);
   allPlayers.add(player1);
   allPlayers.add(player2);
@@ -33,7 +33,23 @@ void setup() {
 
 void draw() {
   _Map.refresh();
+  selectPlayer();
+  drawCharacters();
+  playersTurn();
+  enemiesTurn();
+}
 
+void drawCharacters() {
+  //create one hero and one enemy
+  for (Heroes player : allPlayers) {
+    player.summonHero();
+  }
+  for (Heroes enemy : allEnemies) {
+    enemy.summonHero();
+  }
+}
+
+void selectPlayer() {
   if (mousePressed) {
 
     int adjMouseXcor = mouseX/50;
@@ -47,15 +63,9 @@ void draw() {
       }
     }
   }
+}
 
-  //create one hero and one enemy
-  for (Heroes player : allPlayers) {
-    player.summonHero();
-  }
-  for (Heroes enemy : allEnemies) {
-    enemy.summonHero();
-  }
-
+void playersTurn() {
   if (curPlayer != null) {
     //~~Player's turn~~\\
     if (turn == "player") {
@@ -63,11 +73,11 @@ void draw() {
       //check if hero can still move
       if (curPlayer.moves > 0) {
         curPlayer.moveHero(); //move hero
-        for (int x = 0; x < allEnemies.size(); x++){
-            if (curPlayer.interact(allEnemies.get(x))){
-               curPlayer.attack(allEnemies.get(x)); 
-               break;
-            }
+        for (int x = 0; x < allEnemies.size(); x++) {
+          if (curPlayer.interact(allEnemies.get(x))) {
+            curPlayer.attack(allEnemies.get(x)); 
+            break;
+          }
         }
       }
 
@@ -77,27 +87,29 @@ void draw() {
         enemy1.resetMoves();
       }
     }
+  }
+}
 
-    //~~Enemy's turn~~\\
-    if (turn == "enemy") {
+void enemiesTurn() {
+  //~~Enemy's turn~~\\
+  if (turn == "enemy") {
 
-      //check if hero's turn is over and if enemy can still move
-      if (enemy1.moves > 0) {
-        enemy1.trackHero(curPlayer); //enemy moves towards hero
-      }
+    //check if hero's turn is over and if enemy can still move
+    if (enemy1.moves > 0) {
+      enemy1.trackHero(curPlayer); //enemy moves towards hero
+    }
 
-      //Check if enemy is adjacent to hero
-      //Tell enemy to stop moving
-      if (enemy1.interact(curPlayer)) {
-        enemy1.moves = 0;
-        enemy1.attack(curPlayer);
-      }
+    //Check if enemy is adjacent to hero
+    //Tell enemy to stop moving
+    if (enemy1.interact(curPlayer)) {
+      enemy1.moves = 0;
+      enemy1.attack(curPlayer);
+    }
 
-      //End enemy turn and start player turn
-      if (enemy1.moves == 0) {
-        turn = "player";
-        curPlayer.resetMoves();
-      }
+    //End enemy turn and start player turn
+    if (enemy1.moves == 0) {
+      turn = "player";
+      curPlayer.resetMoves();
     }
   }
 }

@@ -315,7 +315,7 @@ public float getAvo(){
     moves = 5;
   }
 
-  public void summonHero() {
+public void summonHero() {
     fill(255);
     ellipse(xcor, ycor, 50, 50);
   }

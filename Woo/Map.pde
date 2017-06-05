@@ -13,6 +13,10 @@ public class Map {
     noiseDetail(5, 0.6);
   }
 
+  void mainMenu(){
+    
+  }
+
   void refresh() { //rename to refresh after adding to Woo
     loadPixels();
 
