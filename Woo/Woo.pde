@@ -35,17 +35,25 @@ void draw() {
   _Map.refresh();
   selectPlayer();
   drawCharacters();
+  if(turn == "player"){
   playersTurn();
+  clickEndTurn();
+  }
   enemiesTurn();
+  System.out.println(turn);
 }
 
 void drawCharacters() {
   //create one hero and one enemy
   for (Heroes player : allPlayers) {
-    player.summonHero();
+    if (player.getStatus()) {
+      player.summonHero();
+    }
   }
   for (Heroes enemy : allEnemies) {
-    enemy.summonHero();
+    if (enemy.getStatus()) {
+      enemy.summonHero();
+    }
   }
 }
 
@@ -113,3 +121,11 @@ void enemiesTurn() {
     }
   }
 }
+
+void clickEndTurn(){
+    if(mousePressed){
+      if(mouseX > 0 && mouseX < 201 && mouseY > 565 && mouseY < 640){
+          turn = "enemy";
+      }
+    }
+  }
