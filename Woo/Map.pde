@@ -13,11 +13,8 @@ public class Map {
     noiseDetail(5, 0.6);
   }
 
-  void startMenu(){
-    background(0);
-    textSize(30);
-    fill(255);
-    text("Press any key to begin", 250, 400);
+  void mainMenu(){
+    
   }
 
   void refresh() { //rename to refresh after adding to Woo
