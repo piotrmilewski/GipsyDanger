@@ -1,6 +1,7 @@
 public class Map {
 
   float increment = 0.02;
+  int currAvailWaves = 1;
   PImage img;
 
   Map( int seed ) {
@@ -13,11 +14,29 @@ public class Map {
     noiseDetail(5, 0.6);
   }
 
-  void startMenu(){
+  void startMenu() {
     background(0);
     textSize(30);
     fill(255);
     text("Press any key to begin", 250, 400);
+  }
+
+  void mainMenu() {
+    background(0);
+    textSize(30);
+    fill(255);
+    text("1. Select Wave", 250, 200);
+    text("2. Manage your Team", 250, 300);
+    text("3. Leave Game", 250, 400);
+  }
+
+  void waveSelection(){
+    background(0);
+    textSize(22);
+    fill(255);
+   for (int i = 1; i <= currAvailWaves; i++){
+     text(i + ". Trial " + i, 350, 200 + (10 * i));
+   }
   }
 
   void refresh() { //rename to refresh after adding to Woo
@@ -53,7 +72,7 @@ public class Map {
     printStats();
     sideMenu();
   }
-  
+
   void sideMenu() {
     int grid = 80;
     stroke(255);
@@ -94,24 +113,21 @@ public class Map {
       text((int)curPlayer.getAvo(), 695, 520);
       text("17", 749, 528);
       //weapon containment
-      text("", 410, 560);
-      text("", 410, 594);
-      text("", 410, 628);
-      text("", 410, 662);
-      text("", 410, 696);   
+      text("177", 410, 560);
+      text("177", 410, 594);
+      text("177", 410, 628);
+      text("177", 410, 662);
+      text("177", 410, 696);   
       //weapon durability
-      text("", 740, 560);
-      text("", 740, 594);
-      text("", 740, 628);
-      text("", 740, 662);
-      text("", 740, 696);
+      text("177", 740, 560);
+      text("177", 740, 594);
+      text("177", 740, 628);
+      text("177", 740, 662);
+      text("177", 740, 696);
       //name
       textSize(26);
       fill(255);
       text("Levi", 390, 430);
     }
   }
-  
-  
-  
 }

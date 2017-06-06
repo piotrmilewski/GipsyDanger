@@ -10,8 +10,9 @@ Enemy enemy2 = new Enemy(525, 375);
 Enemy enemy3 = new Enemy(575, 325);
 Enemy enemy4 = new Enemy(525, 325);
 
-boolean startMenu;
-boolean mainMenu;
+boolean startMenu = true;
+boolean mainMenu = false;
+boolean selecMenu = false;
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
@@ -30,20 +31,26 @@ void setup() {
   allEnemies.add(enemy2);
   allEnemies.add(enemy3);
   allEnemies.add(enemy4);
-  startMenu = true;
-  mainMenu = false;
 }
 
 void draw() {
   if (startMenu) {
     _Map.startMenu();
-    if (keyPressed || mousePressed){
+    if (keyPressed || mousePressed) {
       startMenu = false;
       mainMenu = true;
     }
-  } 
-  if (mainMenu){
+  } else if (mainMenu) {
     _Map.mainMenu();
+    if (keyPressed){
+      if (key == '1'){
+        mainMenu = false;
+        selecMenu = true;
+      }
+    }
+  } 
+  else if (selecMenu){
+    _Map.waveSelection();
   }else {
     background(15, 135, 71);
     _Map.refresh();
