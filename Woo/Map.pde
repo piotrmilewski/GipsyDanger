@@ -91,17 +91,17 @@ public class Map {
       text((int)curPlayer.getAvo(), 695, 520);
       text("17", 749, 528);
       //weapon containment
-      text("177", 410, 560);
-      text("177", 410, 594);
-      text("177", 410, 628);
-      text("177", 410, 662);
-      text("177", 410, 696);   
+      text("", 410, 560);
+      text("", 410, 594);
+      text("", 410, 628);
+      text("", 410, 662);
+      text("", 410, 696);   
       //weapon durability
-      text("177", 740, 560);
-      text("177", 740, 594);
-      text("177", 740, 628);
-      text("177", 740, 662);
-      text("177", 740, 696);
+      text("", 740, 560);
+      text("", 740, 594);
+      text("", 740, 628);
+      text("", 740, 662);
+      text("", 740, 696);
       //name
       textSize(26);
       fill(255);
