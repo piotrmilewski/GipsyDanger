@@ -6,6 +6,10 @@ public class Heroes {
 
   protected int adjXcor; //scaled down version of pixel location
   protected int adjYcor; //scaled down version of pixel location
+  
+  protected HeapPriorityQueue<Weapon>;
+  protected String weaponName;
+  protected 
 
   protected int moves; //amount of moves you have left in your turn
   protected boolean alive; 
@@ -84,11 +88,7 @@ public class Heroes {
       exp = 0;
       hp = 18;
       hpCap = 18;
-      atk = 6;
       def = 7;
-      hit = 0.9;
-      crit = 0.2;
-      avo = 0.5;
       str = 6;
       res = 0;
       mag = 0;
@@ -104,11 +104,7 @@ public class Heroes {
       exp = 0;
       hp = 16;
       hpCap = 16;
-      atk = 4;
       def = 5;
-      hit = 0.9;
-      crit = 0.2;
-      avo = 0.5;
       str = 4;
       res = 3;
       mag = 0;
@@ -124,11 +120,7 @@ public class Heroes {
       exp = 0;
       hp = 18;
       hpCap = 18;
-      atk = 6;
       def = 7;
-      hit = 0.9;
-      crit = 0.2;
-      avo = 0.5;
       str = 6;
       res = 0;
       mag = 0;
@@ -140,6 +132,8 @@ public class Heroes {
     //Knight (4)
     if (type == 4) {
       type = 4;
+      lvl = 1;
+      exp = 0;
       hp = 18;
       hpCap = 18;
       def = 11;
@@ -154,6 +148,8 @@ public class Heroes {
     //Myrmidon (5)
     if (type == 5) {
       type = 5;
+      lvl = 1;
+      exp = 0;
       hp = 16;
       hpCap = 16;
       def = 4;
@@ -168,6 +164,8 @@ public class Heroes {
     //Thief (6)
     if (type == 6) {
       type = 6;
+      lvl = 1;
+      exp = 0;
       hp = 16;
       hpCap = 16;
       def = 2;
@@ -182,6 +180,8 @@ public class Heroes {
     //Fighter (7)
     if (type == 7) {
       type = 7;
+      lvl = 1;
+      exp = 0;
       hp = 20;
       hpCap = 20;
       def = 4;
@@ -196,6 +196,8 @@ public class Heroes {
     //Mercenary (8)
     if (type == 8) {
       type = 8;
+      lvl = 1;
+      exp = 0;
       hp = 18;
       hpCap = 18;
       def = 5;
@@ -210,6 +212,8 @@ public class Heroes {
     //Archer (9)
     if (type == 9) {
       type = 9;
+      lvl = 1;
+      exp = 0;
       hp = 16;
       hpCap = 16;
       def = 5;
@@ -224,6 +228,8 @@ public class Heroes {
     //Mage (10)
     if (type == 10) {
       type = 10;
+      lvl = 1;
+      exp = 0;
       hp = 16;
       hpCap = 16;
       def = 0;
@@ -243,6 +249,10 @@ public class Heroes {
     hit = ((skill*3) + luck)/2;
     crit = (skill/2);
     avo = ((speed*3) + luck)/2;
+  }
+  
+  public boolean calcCombatStats(){
+    atk = str 
   }
   
   public boolean getStatus(){

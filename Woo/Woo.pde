@@ -10,12 +10,10 @@ Enemy enemy2 = new Enemy(525, 375);
 Enemy enemy3 = new Enemy(575, 325);
 Enemy enemy4 = new Enemy(525, 325);
 
-<<<<<<< HEAD
 boolean startMenu = true;
 boolean mainMenu = false;
 boolean selecMenu = false;
-=======
->>>>>>> c091bbeaba3a0de76f91c2e96c0eaa2323c753d1
+boolean yourTurn = true;
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
@@ -39,7 +37,6 @@ void setup() {
 }
 
 void draw() {
-<<<<<<< HEAD
   if (startMenu) {
     _Map.startMenu();
     if (keyPressed || mousePressed) {
@@ -48,16 +45,23 @@ void draw() {
     }
   } else if (mainMenu) {
     _Map.mainMenu();
-    if (keyPressed){
-      if (key == '1'){
+    if (keyPressed) {
+      if (key == '1') {
         mainMenu = false;
         selecMenu = true;
       }
     }
-  } 
-  else if (selecMenu){
+  } else if (selecMenu) {
     _Map.waveSelection();
-  }else {
+    if (keyPressed) {
+      System.out.println(_Map.currAvailWaves);
+      System.out.println(key);
+      if (Character.getNumericValue(key) <= (_Map.currAvailWaves + 1)) {
+        _Map = new Map(Character.getNumericValue(key));
+        selecMenu = false;
+      }
+    }
+  } else {
     background(15, 135, 71);
     _Map.refresh();
     selectPlayer();
@@ -68,16 +72,15 @@ void draw() {
     }
     enemiesTurn();
     System.out.println(turn);
-=======
-  _Map.refresh();
-  selectPlayer();
-  drawCharacters();
-  if (turn == "player") {
-    playersTurn();
-    clickEndTurn();
->>>>>>> c091bbeaba3a0de76f91c2e96c0eaa2323c753d1
+    _Map.refresh();
+    selectPlayer();
+    drawCharacters();
+    if (turn == "player") {
+      playersTurn();
+      clickEndTurn();
+    }
+    enemiesTurn();
   }
-  enemiesTurn();
 }
 
 void drawCharacters() {
@@ -146,7 +149,7 @@ void enemiesTurn() {
       }
     }
 
-System.out.println(trackedPlayer);
+    System.out.println(trackedPlayer);
 
     //check if hero's turn is over and if enemy can still move
     if (enemy1.moves > 0) {

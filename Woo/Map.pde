@@ -1,11 +1,12 @@
 public class Map {
 
   float increment = 0.02;
-  int currAvailWaves = 1;
+  int currAvailWaves;
   PImage img;
 
   Map( int seed ) {
     setup( seed);
+    currAvailWaves = seed;
   }
 
   void setup(int seed) { //add "int seed" as a parameter after adding into woo
@@ -14,16 +15,11 @@ public class Map {
     noiseDetail(5, 0.6);
   }
 
-<<<<<<< HEAD
   void startMenu() {
     background(0);
     textSize(30);
     fill(255);
     text("Press any key to begin", 250, 400);
-=======
-  void mainMenu(){
-    
->>>>>>> c091bbeaba3a0de76f91c2e96c0eaa2323c753d1
   }
 
   void mainMenu() {
@@ -39,7 +35,7 @@ public class Map {
     background(0);
     textSize(22);
     fill(255);
-   for (int i = 1; i <= currAvailWaves; i++){
+   for (int i = 1; i <= currAvailWaves + 1; i++){
      text(i + ". Trial " + i, 350, 200 + (10 * i));
    }
   }
