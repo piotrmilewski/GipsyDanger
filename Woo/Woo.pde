@@ -10,6 +10,8 @@ Enemy enemy2 = new Enemy(525, 375);
 Enemy enemy3 = new Enemy(575, 325);
 Enemy enemy4 = new Enemy(525, 325);
 
+boolean startMenu;
+boolean mainMenu;
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
@@ -18,7 +20,6 @@ ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
 
 
 void setup() {
-  background(15, 135, 71);
   size(801, 801);
   allPlayers.add(player1);
   allPlayers.add(player2);
@@ -29,18 +30,32 @@ void setup() {
   allEnemies.add(enemy2);
   allEnemies.add(enemy3);
   allEnemies.add(enemy4);
+  startMenu = true;
+  mainMenu = false;
 }
 
 void draw() {
-  _Map.refresh();
-  selectPlayer();
-  drawCharacters();
-  if(turn == "player"){
-  playersTurn();
-  clickEndTurn();
+  if (startMenu) {
+    _Map.startMenu();
+    if (keyPressed || mousePressed){
+      startMenu = false;
+      mainMenu = true;
+    }
+  } 
+  if (mainMenu){
+    _Map.mainMenu();
+  }else {
+    background(15, 135, 71);
+    _Map.refresh();
+    selectPlayer();
+    drawCharacters();
+    if (turn == "player") {
+      playersTurn();
+      clickEndTurn();
+    }
+    enemiesTurn();
+    System.out.println(turn);
   }
-  enemiesTurn();
-  System.out.println(turn);
 }
 
 void drawCharacters() {
@@ -122,10 +137,10 @@ void enemiesTurn() {
   }
 }
 
-void clickEndTurn(){
-    if(mousePressed){
-      if(mouseX > 0 && mouseX < 201 && mouseY > 565 && mouseY < 640){
-          turn = "enemy";
-      }
+void clickEndTurn() {
+  if (mousePressed) {
+    if (mouseX > 0 && mouseX < 201 && mouseY > 565 && mouseY < 640) {
+      turn = "enemy";
     }
   }
+}
