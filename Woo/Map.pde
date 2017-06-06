@@ -14,11 +14,16 @@ public class Map {
     noiseDetail(5, 0.6);
   }
 
+<<<<<<< HEAD
   void startMenu() {
     background(0);
     textSize(30);
     fill(255);
     text("Press any key to begin", 250, 400);
+=======
+  void mainMenu(){
+    
+>>>>>>> c091bbeaba3a0de76f91c2e96c0eaa2323c753d1
   }
 
   void mainMenu() {

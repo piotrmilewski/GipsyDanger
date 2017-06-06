@@ -9,6 +9,8 @@ public class Heroes {
 
   protected int moves; //amount of moves you have left in your turn
   protected boolean alive; 
+  
+  protected int type;
 
   //Stats
   protected int lvl;
@@ -37,6 +39,8 @@ public class Heroes {
 
     alive = true;
     moves = 5;
+    
+    type = 0;
 
     //Instantiate stats
     lvl = 0;
@@ -75,6 +79,7 @@ public class Heroes {
 
     //Lord (1)
     if (type == 1) {
+      type = 1;
       lvl = 1;
       exp = 0;
       hp = 18;
@@ -94,6 +99,7 @@ public class Heroes {
 
     //Tactician (2)
     if (type == 2) {
+      type = 2;
       lvl = 1;
       exp = 0;
       hp = 16;
@@ -113,6 +119,7 @@ public class Heroes {
 
     //Cavelier (3)
     if (type == 3) {
+      type = 3;
       lvl = 1;
       exp = 0;
       hp = 18;
@@ -132,6 +139,7 @@ public class Heroes {
 
     //Knight (4)
     if (type == 4) {
+      type = 4;
       hp = 18;
       hpCap = 18;
       def = 11;
@@ -145,6 +153,7 @@ public class Heroes {
 
     //Myrmidon (5)
     if (type == 5) {
+      type = 5;
       hp = 16;
       hpCap = 16;
       def = 4;
@@ -158,6 +167,7 @@ public class Heroes {
 
     //Thief (6)
     if (type == 6) {
+      type = 6;
       hp = 16;
       hpCap = 16;
       def = 2;
@@ -171,6 +181,7 @@ public class Heroes {
 
     //Fighter (7)
     if (type == 7) {
+      type = 7;
       hp = 20;
       hpCap = 20;
       def = 4;
@@ -184,6 +195,7 @@ public class Heroes {
 
     //Mercenary (8)
     if (type == 8) {
+      type = 8;
       hp = 18;
       hpCap = 18;
       def = 5;
@@ -197,6 +209,7 @@ public class Heroes {
 
     //Archer (9)
     if (type == 9) {
+      type = 9;
       hp = 16;
       hpCap = 16;
       def = 5;
@@ -210,6 +223,7 @@ public class Heroes {
 
     //Mage (10)
     if (type == 10) {
+      type = 10;
       hp = 16;
       hpCap = 16;
       def = 0;
@@ -389,4 +403,8 @@ public void summonHero() {
     }
   }
   
+  
+  String toString(){
+     return type + ""; 
+  }
 }
