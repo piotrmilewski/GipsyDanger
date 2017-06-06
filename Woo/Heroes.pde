@@ -1,6 +1,8 @@
 public class Heroes {
 
   //Data
+  private String name;
+  
   protected int xcor; //pixel location
   protected int ycor; //pixel location
 
@@ -31,6 +33,8 @@ public class Heroes {
   public Heroes() {
     xcor = 25;
     ycor = 25;
+    
+    name = "no name";
 
     adjXcor = xcor/50;
     adjYcor = ycor/50;
@@ -75,6 +79,7 @@ public class Heroes {
 
     //Lord (1)
     if (type == 1) {
+      name = "Lord";
       lvl = 1;
       exp = 0;
       hp = 18;
@@ -94,6 +99,7 @@ public class Heroes {
 
     //Tactician (2)
     if (type == 2) {
+      name = "Tactician";
       lvl = 1;
       exp = 0;
       hp = 16;
@@ -113,6 +119,7 @@ public class Heroes {
 
     //Cavelier (3)
     if (type == 3) {
+      name = "Cavelier";
       lvl = 1;
       exp = 0;
       hp = 18;
@@ -132,6 +139,7 @@ public class Heroes {
 
     //Knight (4)
     if (type == 4) {
+      name = "Knight";
       hp = 18;
       hpCap = 18;
       def = 11;
@@ -145,6 +153,7 @@ public class Heroes {
 
     //Myrmidon (5)
     if (type == 5) {
+      name = "Myrmidon";
       hp = 16;
       hpCap = 16;
       def = 4;
@@ -158,6 +167,7 @@ public class Heroes {
 
     //Thief (6)
     if (type == 6) {
+      name = "Thief";
       hp = 16;
       hpCap = 16;
       def = 2;
@@ -171,6 +181,7 @@ public class Heroes {
 
     //Fighter (7)
     if (type == 7) {
+      name = "Fighter";
       hp = 20;
       hpCap = 20;
       def = 4;
@@ -184,6 +195,7 @@ public class Heroes {
 
     //Mercenary (8)
     if (type == 8) {
+      name = "Mercenary";
       hp = 18;
       hpCap = 18;
       def = 5;
@@ -197,6 +209,7 @@ public class Heroes {
 
     //Archer (9)
     if (type == 9) {
+      name = "Archer";
       hp = 16;
       hpCap = 16;
       def = 5;
@@ -210,6 +223,7 @@ public class Heroes {
 
     //Mage (10)
     if (type == 10) {
+      name = "Mage";
       hp = 16;
       hpCap = 16;
       def = 0;
@@ -229,6 +243,10 @@ public class Heroes {
     hit = ((skill*3) + luck)/2;
     crit = (skill/2);
     avo = ((speed*3) + luck)/2;
+  }
+  
+  public String getName(){
+   return name; 
   }
   
   public boolean getStatus(){
