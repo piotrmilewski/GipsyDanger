@@ -1,0 +1,21 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 06-05-17
+
+1. Which jobs are most crucial?
+
+After getting attack to work, the next most crucial job would be to implement buttons that allows for the ending of the user's turn, since a user might want to end his or her turn before the move counters count down to 0.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+The user must be able to end his or her turn, in order to let the enemy go, therefore maintaining order within the game. It would also be useful to have a button that automatically ends the game if the user feels like giving up.
+
+3. Which components are prerequisites for others?
+
+Move counter would be prerequisities for getting endTurn to work, since it is not just one hero that needed to be tracked but multiple heroes that needed to be tracked at once.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+
+Since this is largely modification on specific files, this task should be collaboratively tackled to provide each other with more knowledge, fix each other's errors, and also avoid merge conflicts when pushing to the repo.
+
+5. Addtional Comments:

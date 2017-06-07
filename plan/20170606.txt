@@ -1,0 +1,20 @@
+Team GipsyDanger: Piotr Milewski, Levi Olevsky, Edwin Mok
+APCS2 pd5
+Plan for 06-06-17
+
+1. Which jobs are most crucial?
+
+Since this is the last day of being able to work on the project, we feel like getting weapons to work would be crucial and would definitely help a lot in the calculations in battle.
+
+2. Which components constitute core functionality (vs non-essential)?
+
+Getting basic weapons would constitute as a core functionality because it is just the way the actual game works, weapons being a major part of methods such as attack() and other methods that require calculations.
+
+3. Which components are prerequisites for others?
+
+Getting the basic weapons and their stats to complete the formulas that we used to determine the specific player stats that were not instantiate earlier.
+
+4. Which tasks can be delegated, and which must be collaboratively tackled?
+Piotr can keep on working on Maps and Driver, and Levi and Edwin can work together on implementing buttons and other additional features possible.
+
+5. Addtional Comments:
