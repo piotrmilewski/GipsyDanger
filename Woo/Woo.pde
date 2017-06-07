@@ -179,19 +179,12 @@ void playersTurn() {
   if (curPlayer != null) {
     //~~Player's turn~~\\
     if (turn == "player") {
-
-      for (int x = 0; x < allEnemies.size(); x++) {
-        if (curPlayer.interact(allEnemies.get(x))) {
-          curPlayer.attack(allEnemies.get(x)); 
-          break;
-        }
-      }
-
+      
       //check if hero can still move
       if (curPlayer.moves > 0) {
         curPlayer.moveHero(); //move hero
         for (int x = 0; x < allEnemies.size(); x++) {
-          if (curPlayer.interact(allEnemies.get(x))) {
+          if (curPlayer.interact(allEnemies.get(x)) && allEnemies.get(x).alive) {
             curPlayer.attack(allEnemies.get(x)); 
             break;
           }
