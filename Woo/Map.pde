@@ -108,27 +108,29 @@ public class Map {
       text(curPlayer.getExp(), 550, 495);
       text(curPlayer.getHp() + "/" + curPlayer.getHpCap(), 450, 522);
       //upper right stats
-      text((int)curPlayer.getAtk(), 695, 430);
-      text((int)curPlayer.getHit(), 695, 460);
-      text((int)curPlayer.getCrit(), 695, 490);
-      text((int)curPlayer.getAvo(), 695, 520);
-      text("17", 749, 528);
+      text((int)curPlayer.getAtk(), 685, 430);
+      text((int)curPlayer.getHit(), 685, 460);
+      text((int)curPlayer.getCrit(), 685, 490);
+      text((int)curPlayer.getAvo(), 685, 520);
+      text("5", 755, 528);
       //weapon containment
-      text("177", 410, 560);
+      text(curPlayer._weapons.peek().getName(), 410, 560);
+      /*
       text("177", 410, 594);
       text("177", 410, 628);
       text("177", 410, 662);
-      text("177", 410, 696);   
+      text("177", 410, 696);*/   
       //weapon durability
-      text("177", 740, 560);
+      text(curPlayer._weapons.peek().getDurability(), 740, 560);
+      /*
       text("177", 740, 594);
       text("177", 740, 628);
       text("177", 740, 662);
-      text("177", 740, 696);
+      text("177", 740, 696);*/
       //name
       textSize(26);
       fill(255);
-      text("Levi", 390, 430);
+      text(curPlayer.getName(), 390, 430);
     }
   }
 }

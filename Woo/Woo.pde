@@ -43,6 +43,7 @@ void draw() {
       startMenu = false;
       mainMenu = true;
     }
+    delay(100);
   } else if (mainMenu) {
     _Map.mainMenu();
     if (keyPressed) {
@@ -51,6 +52,7 @@ void draw() {
         selecMenu = true;
       }
     }
+    delay(100);
   } else if (selecMenu) {
     _Map.waveSelection();
     if (keyPressed) {
@@ -61,6 +63,7 @@ void draw() {
         selecMenu = false;
       }
     }
+    delay(100);
   } else {
     background(15, 135, 71);
     _Map.refresh();

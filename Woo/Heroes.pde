@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class Heroes {
 
   //Data
@@ -6,14 +8,16 @@ public class Heroes {
 
   protected int adjXcor; //scaled down version of pixel location
   protected int adjYcor; //scaled down version of pixel location
-  
-  protected HeapPriorityQueue<Weapon>;
+
+  protected PriorityQueue<Weapon> _weapons = new PriorityQueue<Weapon>();
   protected String weaponName;
-  protected 
 
   protected int moves; //amount of moves you have left in your turn
   protected boolean alive; 
-  
+
+  protected String desc; //description of the character
+
+  protected String name;
   protected int type;
 
   //Stats
@@ -43,10 +47,11 @@ public class Heroes {
 
     alive = true;
     moves = 5;
-    
+
     type = 0;
 
     //Instantiate stats
+    name = "Chrom";
     lvl = 0;
     exp = 0;
     hp = 10;
@@ -83,6 +88,7 @@ public class Heroes {
 
     //Lord (1)
     if (type == 1) {
+      name = "Chrom";
       type = 1;
       lvl = 1;
       exp = 0;
@@ -95,10 +101,12 @@ public class Heroes {
       skill = 5;
       speed = 6;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Tactician (2)
     if (type == 2) {
+      name = "Robin";
       type = 2;
       lvl = 1;
       exp = 0;
@@ -111,10 +119,12 @@ public class Heroes {
       skill = 5;
       speed = 5;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Cavelier (3)
     if (type == 3) {
+      name = "Sully";
       type = 3;
       lvl = 1;
       exp = 0;
@@ -127,10 +137,12 @@ public class Heroes {
       skill = 5;
       speed = 6;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Lance", "Lance", 90, 3, 50));
     }
 
     //Knight (4)
     if (type == 4) {
+      name = "Kellam";
       type = 4;
       lvl = 1;
       exp = 0;
@@ -143,10 +155,12 @@ public class Heroes {
       skill = 4;
       speed = 4;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Lance", "Lance", 90, 3, 50));
     }
 
     //Myrmidon (5)
     if (type == 5) {
+      name = "Lonqu";
       type = 5;
       lvl = 1;
       exp = 0;
@@ -159,10 +173,12 @@ public class Heroes {
       skill = 9;
       speed = 10;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Thief (6)
     if (type == 6) {
+      name = "Gaius";
       type = 6;
       lvl = 1;
       exp = 0;
@@ -175,10 +191,12 @@ public class Heroes {
       skill = 6;
       speed = 8;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Fighter (7)
     if (type == 7) {
+      name = "Vaike";
       type = 7;
       lvl = 1;
       exp = 0;
@@ -191,10 +209,12 @@ public class Heroes {
       skill = 5;
       speed = 5;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Axe", "Axe", 80, 4, 50));
     }
 
     //Mercenary (8)
     if (type == 8) {
+      name = "Gregor";
       type = 8;
       lvl = 1;
       exp = 0;
@@ -207,10 +227,12 @@ public class Heroes {
       skill = 8;
       speed = 7;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Archer (9)
     if (type == 9) {
+      name = "Virion";
       type = 9;
       lvl = 1;
       exp = 0;
@@ -223,10 +245,12 @@ public class Heroes {
       skill = 8;
       speed = 6;
       luck = 0;
+      _weapons.add(new Weapon("Bronze Bow", "Bow", 90, 3, 50));
     }
 
     //Mage (10)
     if (type == 10) {
+      name = "Tharja";
       type = 10;
       lvl = 1;
       exp = 0;
@@ -239,43 +263,48 @@ public class Heroes {
       skill = 3;
       speed = 4;
       luck = 0;
+      _weapons.add(new Weapon("Fire", "Tome", 90, 2, 50));
     }
 
+    calcCombatStats();
+  }
+
+  public void calcCombatStats() {
     if (str > 0) {
-      atk = str;
+      atk = str + (_weapons.peek()).getMight();
     } else if (mag > 0) {
-      atk = mag;
+      atk = mag + (_weapons.peek()).getMight();
     }
-    hit = ((skill*3) + luck)/2;
-    crit = (skill/2);
-    avo = ((speed*3) + luck)/2;
+    hit = (_weapons.peek()).getHit() + ((skill * 3 + luck) / 2);
+    crit = skill / 2;
+    avo = ((speed * 3) + luck)/2;
   }
-  
-  public boolean calcCombatStats(){
-    atk = str 
+
+  public boolean getStatus() {
+    return alive;
   }
-  
-  public boolean getStatus(){
-   return alive; 
+
+  public void toggleStatus() {
+    alive = !alive;
   }
-  
-  public void toggleStatus(){
-   alive = !alive; 
+
+  public String getName() {
+    return name;
   }
-  
-  public int getLevel(){
-    return lvl; 
+
+  public int getLevel() {
+    return lvl;
   }
-  
-  public int getExp(){
-     return exp; 
+
+  public int getExp() {
+    return exp;
   }
 
   public int getHp() {
     return hp;
   }
-  
-  public int setHp(int newHp){
+
+  public int setHp(int newHp) {
     int prevHp = hp;
     hp= newHp;
     return prevHp;
@@ -319,27 +348,27 @@ public class Heroes {
     }
     return hp;
   }
-  
-  public float getAtk(){
-    return atk; 
-  }
-  
-  public float getCrit(){
-    return crit; 
+
+  public float getAtk() {
+    return atk;
   }
 
-public float getHit(){
-  return hit;
-}
+  public float getCrit() {
+    return crit;
+  }
 
-public float getAvo(){
-   return avo; 
-}
+  public float getHit() {
+    return hit;
+  }
+
+  public float getAvo() {
+    return avo;
+  }
   public void resetMoves() {
     moves = 5;
   }
 
-public void summonHero() {
+  public void summonHero() {
     fill(255);
     ellipse(xcor, ycor, 50, 50);
   }
@@ -404,17 +433,17 @@ public void summonHero() {
   }
 
   public void attack(Heroes hero) {
-    if (hero.getStatus()){
+    if (hero.getStatus()) {
       hero.subtractHp(atk);
-      if (hero.getHp() <= 0){
+      if (hero.getHp() <= 0) {
         hero.setHp(0);
         hero.toggleStatus();
       }
     }
   }
-  
-  
-  String toString(){
-     return type + ""; 
+
+
+  String toString() {
+    return type + "";
   }
 }
