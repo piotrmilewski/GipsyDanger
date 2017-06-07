@@ -39,6 +39,10 @@ public class Map {
      text(i + ". Trial " + i, 350, 200 + (10 * i));
    }
   }
+  
+  void characSelection() {
+    
+  }
 
   void refresh() { //rename to refresh after adding to Woo
     loadPixels();

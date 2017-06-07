@@ -17,8 +17,6 @@ public class Heroes {
   protected int moves; //amount of moves you have left in your turn
   protected boolean alive; 
 
-  protected String desc; //description of the character
-
   protected String name;
   protected int type;
 
@@ -295,6 +293,14 @@ public class Heroes {
     avo = ((speed * 3) + luck)/2;
   }
 
+  public void setX(int x) {
+    xcor = x;
+  }
+  
+  public void setY(int y) {
+    ycor = y;
+  }
+
   public boolean getStatus() {
     return alive;
   }
@@ -459,6 +465,6 @@ public class Heroes {
 
 
   String toString() {
-    return type + "";
+    return "1."
   }
 }

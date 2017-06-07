@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+/*
 Heroes player1 = new Heroes(75, 75, 1);
 Heroes player2 = new Heroes(25, 25, 2);
 Heroes player3 = new Heroes(75, 25, 3);
@@ -9,15 +9,27 @@ Enemy enemy1 = new Enemy(575, 375);
 Enemy enemy2 = new Enemy(525, 375);
 Enemy enemy3 = new Enemy(575, 325);
 Enemy enemy4 = new Enemy(525, 325);
+*/
+Heroes player1;
+Heroes player2;
+Heroes player3;
+Heroes player4;
+
+Enemy enemy1;
+Enemy enemy2;
+Enemy enemy3;
+Enemy enemy4;
 
 boolean startMenu = true;
 boolean mainMenu = false;
 boolean selecMenu = false;
+boolean characMenu = false;
 boolean yourTurn = true;
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
 Heroes trackedPlayer = player1;
+ArrayList<Heroes> allCharacters = new ArrayList<Heroes>();
 ArrayList<Heroes> allPlayers = new ArrayList<Heroes>();
 ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
 
@@ -25,6 +37,8 @@ ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
 void setup() {
   background(15, 135, 71);
   size(801, 801);
+  addAllCharacters();
+  /*
   allPlayers.add(player1);
   allPlayers.add(player2);
   allPlayers.add(player3);
@@ -34,6 +48,7 @@ void setup() {
   allEnemies.add(enemy2);
   allEnemies.add(enemy3);
   allEnemies.add(enemy4);
+  */
 }
 
 void draw() {
@@ -51,6 +66,10 @@ void draw() {
         mainMenu = false;
         selecMenu = true;
       }
+      if (key == '2') {
+         mainMenu = false;
+         characMenu = true;
+      }
     }
     delay(100);
   } else if (selecMenu) {
@@ -64,7 +83,11 @@ void draw() {
       }
     }
     delay(100);
-  } else {
+  }
+  else if (characMenu) {
+    _Map.characSelection();
+  }
+  else {
     background(15, 135, 71);
     _Map.refresh();
     selectPlayer();
@@ -187,4 +210,18 @@ void clickEndTurn() {
       enemy4.resetMoves();
     }
   }
+}
+
+void addAllCharacters() {
+  allCharacters.add(new Heroes()); //empty slot
+  allCharacters.add(new Heroes(0, 0, 1));
+  allCharacters.add(new Heroes(0, 0, 2));
+  allCharacters.add(new Heroes(0, 0, 3));
+  allCharacters.add(new Heroes(0, 0, 4));
+  allCharacters.add(new Heroes(0, 0, 5));
+  allCharacters.add(new Heroes(0, 0, 6));
+  allCharacters.add(new Heroes(0, 0, 7));
+  allCharacters.add(new Heroes(0, 0, 8));
+  allCharacters.add(new Heroes(0, 0, 9));
+  allCharacters.add(new Heroes(0, 0, 10));
 }
