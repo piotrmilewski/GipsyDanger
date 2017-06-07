@@ -1,4 +1,6 @@
-import java.util.PriorityQueue;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Iterator;
 
 public class Heroes {
 
@@ -9,7 +11,7 @@ public class Heroes {
   protected int adjXcor; //scaled down version of pixel location
   protected int adjYcor; //scaled down version of pixel location
 
-  protected PriorityQueue<Weapon> _weapons = new PriorityQueue<Weapon>();
+  protected Deque<Weapon> _weapons = new ArrayDeque<Weapon>();
   protected String weaponName;
 
   protected int moves; //amount of moves you have left in your turn
@@ -102,6 +104,8 @@ public class Heroes {
       speed = 6;
       luck = 0;
       _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
+      _weapons.add(new Weapon("Falchion", "Sword", 80, 5, 999));
+      _weapons.add(new Weapon("Rapier", "Sword", 90, 5, 35));
     }
 
     //Tactician (2)
@@ -120,6 +124,7 @@ public class Heroes {
       speed = 5;
       luck = 0;
       _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
+      _weapons.add(new Weapon("Fire", "Tome", 90, 2, 50));
     }
 
     //Cavelier (3)
@@ -138,6 +143,7 @@ public class Heroes {
       speed = 6;
       luck = 0;
       _weapons.add(new Weapon("Bronze Lance", "Lance", 90, 3, 50));
+      _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
     }
 
     //Knight (4)
@@ -156,6 +162,7 @@ public class Heroes {
       speed = 4;
       luck = 0;
       _weapons.add(new Weapon("Bronze Lance", "Lance", 90, 3, 50));
+      _weapons.add(new Weapon("Javelin", "Lance", 80, 2, 25));
     }
 
     //Myrmidon (5)
@@ -174,6 +181,7 @@ public class Heroes {
       speed = 10;
       luck = 0;
       _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
+      _weapons.add(new Weapon("Rapier", "Sword", 90, 5, 35));
     }
 
     //Thief (6)
@@ -192,6 +200,7 @@ public class Heroes {
       speed = 8;
       luck = 0;
       _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
+      _weapons.add(new Weapon("Rapier", "Sword", 90, 5, 35));
     }
 
     //Fighter (7)
@@ -210,6 +219,7 @@ public class Heroes {
       speed = 5;
       luck = 0;
       _weapons.add(new Weapon("Bronze Axe", "Axe", 80, 4, 50));
+      _weapons.add(new Weapon("Tomahawk", "Axe", 60, 10, 25));
     }
 
     //Mercenary (8)
@@ -228,6 +238,7 @@ public class Heroes {
       speed = 7;
       luck = 0;
       _weapons.add(new Weapon("Bronze Sword", "Sword", 100, 3, 50));
+      _weapons.add(new Weapon("Rapier", "Sword", 90, 5, 35));
     }
 
     //Archer (9)
@@ -246,6 +257,7 @@ public class Heroes {
       speed = 6;
       luck = 0;
       _weapons.add(new Weapon("Bronze Bow", "Bow", 90, 3, 50));
+      _weapons.add(new Weapon("Glass Bow", "Bow", 75, 13, 5));
     }
 
     //Mage (10)
@@ -263,7 +275,10 @@ public class Heroes {
       skill = 3;
       speed = 4;
       luck = 0;
-      _weapons.add(new Weapon("Fire", "Tome", 90, 2, 50));
+      _weapons.add(new Weapon("Fire", "Tome", 90, 2, 45));
+      _weapons.add(new Weapon("Thunder", "Tome", 80, 3, 45));
+      _weapons.add(new Weapon("Wind", "Tome", 100, 1, 45));
+      
     }
 
     calcCombatStats();

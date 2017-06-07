@@ -114,19 +114,14 @@ public class Map {
       text((int)curPlayer.getAvo(), 685, 520);
       text("5", 755, 528);
       //weapon containment
-      text(curPlayer._weapons.peek().getName(), 410, 560);
-      /*
-      text("177", 410, 594);
-      text("177", 410, 628);
-      text("177", 410, 662);
-      text("177", 410, 696);*/   
-      //weapon durability
-      text(curPlayer._weapons.peek().getDurability(), 740, 560);
-      /*
-      text("177", 740, 594);
-      text("177", 740, 628);
-      text("177", 740, 662);
-      text("177", 740, 696);*/
+      int constant = 0;
+      Weapon temp;
+      for (Iterator<Weapon> itr = (curPlayer._weapons).iterator(); itr.hasNext();){
+        temp = itr.next();
+        text(temp.getName(), 410, 560 + constant);
+        text(temp.getDurability(), 740, 560 + constant);
+        constant += 34;
+      }
       //name
       textSize(26);
       fill(255);
