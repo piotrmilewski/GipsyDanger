@@ -276,7 +276,6 @@ public class Heroes {
       _weapons.add(new Weapon("Fire", "Tome", 90, 2, 45));
       _weapons.add(new Weapon("Thunder", "Tome", 80, 3, 45));
       _weapons.add(new Weapon("Wind", "Tome", 100, 1, 45));
-      
     }
 
     calcCombatStats();
@@ -454,16 +453,19 @@ public class Heroes {
 
   public void attack(Heroes hero) {
     if (hero.getStatus()) {
-      hero.subtractHp(atk - hero.getDef());
+      if ((atk - hero.getDef()) > 0) {
+        hero.subtractHp(atk - hero.getDef());
+      }
       if (hero.getHp() <= 0) {
         hero.setHp(0);
         hero.toggleStatus();
       }
     }
+    moves = 0;
   }
 
 
   String toString() {
-    return name + ": lvl=" + lvl + ", hp=" + hpCap + ", str=" + str + ", def=" + def + ", res=" + res + ", mag=" + mag + ", skill=" + skill + ", speed=" + speed + ", luck=" + luck; 
+    return name + ": lvl=" + lvl + ", hp=" + hpCap + ", str=" + str + ", def=" + def + ", res=" + res + ", mag=" + mag + ", skill=" + skill + ", speed=" + speed + ", luck=" + luck;
   }
 }
