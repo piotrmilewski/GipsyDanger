@@ -14,7 +14,7 @@ We were able to overcome many obstacles, such as perlin noise map generating, en
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-At this point, we are trying to fix some bugs concerning the characters, as that seems to be a problem that occurs after the 1st turn.
+At this point, we are trying to fix some bugs concerning the characters, as that seems to be a problem that occurs after the 1st turn. Also, the AI for the enemy does not work and messes up the attack phase, so it is unable to progress the user to the next stage but everything else works fine and doesn't crash the program.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
