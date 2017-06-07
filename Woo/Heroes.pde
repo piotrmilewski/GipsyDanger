@@ -293,12 +293,11 @@ public class Heroes {
     avo = ((speed * 3) + luck)/2;
   }
 
-  public void setX(int x) {
+  public void setXY(int x, int y) {
     xcor = x;
-  }
-  
-  public void setY(int y) {
     ycor = y;
+    adjXcor = xcor/50;
+    adjYcor = ycor/50;
   }
 
   public boolean getStatus() {
@@ -455,7 +454,7 @@ public class Heroes {
 
   public void attack(Heroes hero) {
     if (hero.getStatus()) {
-      hero.subtractHp(atk);
+      hero.subtractHp(atk - hero.getDef());
       if (hero.getHp() <= 0) {
         hero.setHp(0);
         hero.toggleStatus();

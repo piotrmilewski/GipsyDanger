@@ -46,10 +46,10 @@ public class Map {
     fill(255);
     //Current Team
     text("Current Team (please make sure team is full before leaving):", 10, 50);
-    text("1. " + player1, 10, 80);
-    text("2. " + player2, 10, 120);
-    text("3. " + player3, 10, 160);
-    text("4. " + player4, 10, 200);
+    text("1. " + allPlayers.get(0), 10, 80);
+    text("2. " + allPlayers.get(1), 10, 120);
+    text("3. " + allPlayers.get(2), 10, 160);
+    text("4. " + allPlayers.get(3), 10, 200);
     //Available characters
     text("Available Characters:", 10, 300);
     text("1. " + allCharacters.get(1), 10, 330);
