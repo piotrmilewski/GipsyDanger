@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 /*
-Heroes player1 = new Heroes(75, 75, 1);
+Heroes layer1 = new Heroes(75, 75, 1);
  Heroes player2 = new Heroes(25, 25, 2);
  Heroes player3 = new Heroes(75, 25, 3);
  Heroes player4 = new Heroes(25, 75, 4);
@@ -62,9 +62,13 @@ void draw() {
     _Map.mainMenu();
     if (keyPressed) { //opens wave selection
       if (key == '1') {
-        mainMenu = false;
-        selecMenu = true;
-        delay(100);
+        if (allPlayers.get(3) != null) {
+          mainMenu = false;
+          selecMenu = true;
+          delay(100);
+        } else {
+          text("BAD HUMAN, GO PICK A TEAM FIRST (OPTION 2)", 10, 50);
+        }
       }
       if (key == '2') { //opens team manager
         mainMenu = false;
@@ -99,15 +103,15 @@ void draw() {
           currTeamChoice++;
           trackedPlayer = allPlayers.get(0);
           delay(100);
-        } else if (currTeamChoice == 2) {
+        } else if (currTeamChoice == 2 && allCharacters.get(hold) != allPlayers.get(0)) {
           allPlayers.set(1, allCharacters.get(hold));
           currTeamChoice++;
           delay(100);
-        } else if (currTeamChoice == 3) {
+        } else if (currTeamChoice == 3 && allCharacters.get(hold) != allPlayers.get(0) && allCharacters.get(hold) != allPlayers.get(1)) {
           allPlayers.set(2, allCharacters.get(hold));
           currTeamChoice++;
           delay(100);
-        } else if (currTeamChoice == 4) {
+        } else if (currTeamChoice == 4 && allCharacters.get(hold) != allPlayers.get(0) && allCharacters.get(hold) != allPlayers.get(1) && allCharacters.get(hold) != allPlayers.get(2)) {
           allPlayers.set(3, allCharacters.get(hold));
           currTeamChoice = 1;
           characMenu = false;
@@ -126,14 +130,7 @@ void draw() {
     if (turn == "player") {
       playersTurn();
       clickEndTurn();
-    }
-    enemiesTurn();
-    _Map.refresh();
-    selectPlayer();
-    drawCharacters();
-    if (turn == "player") {
-      playersTurn();
-      clickEndTurn();
+      clickSurrender();
     }
     enemiesTurn();
   }
@@ -252,15 +249,24 @@ void enemiesTurn() {
 
 void clickEndTurn() {
   if (mousePressed) {
-    if (mouseX > 0 && mouseX < 201 && mouseY > 565 && mouseY < 640) {
+    if (mouseX > 0 && mouseX < 201 && mouseY > 561 && mouseY < 640) {
       turn = "enemy";
       allEnemies.get(0).resetMoves();
       allEnemies.get(1).resetMoves();
       allEnemies.get(2).resetMoves();
       allEnemies.get(3).resetMoves();
     }
+    System.out.println("1");
+    delay(100);
   }
-  delay(1000);
+}
+
+void clickSurrender() {
+  if (mousePressed) {
+    if (mouseX > 0 && mouseX < 201 && mouseY > 640 && mouseY < 720) {
+      mainMenu = true;
+    }
+  }
 }
 
 void addAllCharacters() {

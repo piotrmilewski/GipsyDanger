@@ -36,7 +36,7 @@ public class Map {
     textSize(22);
     fill(255);
     for (int i = 1; i <= currAvailWaves + 1; i++) {
-      text(i + ". Trial " + i, 350, 200 + (10 * i));
+      text(i + ". Trial " + i, 350, 200 + (30 * i));
     }
   }
 
