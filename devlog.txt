@@ -10,23 +10,23 @@ Fire Emblem Remastered
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Insert stuff>
+We were able to overcome many obstacles, such as perlin noise map generating, enemy spawning, and much more. We have used many resources around us to help us overcome the obstacles, such as the very useful and helpful Processing reference. It is also sometimes helpful to search up obstacles solution on the intertubes and sometimes even new things.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Insert stuff>
+At this point, we are trying to fix some bugs concerning the characters, as that seems to be a problem that occurs after the 1st turn.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Insert stuff>
+As a group, we learned a lot frm this final project. We learned that for generating map, perlin noise can be used but it is definitely not easy to catch on how to properly use perlin noise. We also learned that processing syntax is very similar to Java, with some variations but can still take in Java files and read them.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Insert stuff>
+As we were planning on implementing waves, we felt that it would be too difficult since it would be hard to keep track of the wave number, enemy number, and heroes number all at once, and use that to delete the current map and generate a whole new map. 
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<Insert stuff>
+Teamwork is absolutely key in a final project like this. We felt that even though the class only went over processing in a few days, we were able to get familiar with processing using prior Java knowledge and Processng Reference.
 
 ||||||||||||||||||||||||||||||||||||||||||
 
@@ -125,10 +125,18 @@ Edwin Mok,
 Levi Olevsky :: Brush up repo to make sure our project is in compliance
 ==============================================================
 
-2017-06-xx
+2017-06-05
 --------------------------------------------------------------
-Piotr Milewski :: <Thing member did>
-Edwin Mok :: <Thing member did>
-Levi Olevsky :: <Thing member did>
+Piotr Milewski :: Worked on the map and displays of the game
+Edwin Mok :: Researched the mechanism for checking allPlayers instead of just one, depending on the distance between the player and enemy. Also helped out Levi with the buttons.
+Levi Olevsky :: Attempted to implement an end turn button, giving ideas to a few other button ideas. 
+==============================================================
+
+
+2017-06-06
+--------------------------------------------------------------
+Piotr Milewski :: Worked on getting a main menu, added a weapon class and characyer accessibility, and implemented ArrayDeque and Iterator for Weapons. Also added character selection for those that are new to the game.
+Edwin Mok,
+Levi Olevsky :: Brushed up the repo and make it look more lively, also updating and fixing required elements of the project to make sure team is in compliance before final submission.
 ==============================================================
 
