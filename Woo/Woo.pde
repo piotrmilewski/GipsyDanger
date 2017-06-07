@@ -1,15 +1,15 @@
 import java.util.ArrayList;
 /*
 Heroes player1 = new Heroes(75, 75, 1);
-Heroes player2 = new Heroes(25, 25, 2);
-Heroes player3 = new Heroes(75, 25, 3);
-Heroes player4 = new Heroes(25, 75, 4);
-
-Enemy enemy1 = new Enemy(575, 375);
-Enemy enemy2 = new Enemy(525, 375);
-Enemy enemy3 = new Enemy(575, 325);
-Enemy enemy4 = new Enemy(525, 325);
-*/
+ Heroes player2 = new Heroes(25, 25, 2);
+ Heroes player3 = new Heroes(75, 25, 3);
+ Heroes player4 = new Heroes(25, 75, 4);
+ 
+ Enemy enemy1 = new Enemy(575, 375);
+ Enemy enemy2 = new Enemy(525, 375);
+ Enemy enemy3 = new Enemy(575, 325);
+ Enemy enemy4 = new Enemy(525, 325);
+ */
 Heroes player1;
 Heroes player2;
 Heroes player3;
@@ -20,15 +20,19 @@ Enemy enemy2;
 Enemy enemy3;
 Enemy enemy4;
 
+int currTeamChoice = 1;
+
 boolean startMenu = true;
 boolean mainMenu = false;
 boolean selecMenu = false;
 boolean characMenu = false;
 boolean yourTurn = true;
+
 Map _Map = new Map(0);
 String turn = "player";
 Heroes curPlayer;
 Heroes trackedPlayer = player1;
+
 ArrayList<Heroes> allCharacters = new ArrayList<Heroes>();
 ArrayList<Heroes> allPlayers = new ArrayList<Heroes>();
 ArrayList<Enemy> allEnemies = new ArrayList<Enemy>();
@@ -40,15 +44,15 @@ void setup() {
   addAllCharacters();
   /*
   allPlayers.add(player1);
-  allPlayers.add(player2);
-  allPlayers.add(player3);
-  allPlayers.add(player4);
-
-  allEnemies.add(enemy1);
-  allEnemies.add(enemy2);
-  allEnemies.add(enemy3);
-  allEnemies.add(enemy4);
-  */
+   allPlayers.add(player2);
+   allPlayers.add(player3);
+   allPlayers.add(player4);
+   
+   allEnemies.add(enemy1);
+   allEnemies.add(enemy2);
+   allEnemies.add(enemy3);
+   allEnemies.add(enemy4);
+   */
 }
 
 void draw() {
@@ -67,8 +71,9 @@ void draw() {
         selecMenu = true;
       }
       if (key == '2') {
-         mainMenu = false;
-         characMenu = true;
+        mainMenu = false;
+        characMenu = true;
+        delay(500);
       }
     }
     delay(100);
@@ -83,11 +88,38 @@ void draw() {
       }
     }
     delay(100);
-  }
-  else if (characMenu) {
-    _Map.characSelection();
-  }
-  else {
+  } else if (characMenu) {
+    _Map.characSelection(currTeamChoice);
+    if (keyPressed) {
+      int hold = Character.getNumericValue(key);
+      if (hold == 0 && player4 != null) {
+        characMenu = false;
+        mainMenu = true;
+      }
+      if (hold > 0 && hold < 11) {
+        if (currTeamChoice == 1) {
+          player1 = allCharacters.get(hold);
+          currTeamChoice++;
+          delay(100);
+        } else if (currTeamChoice == 2) {
+          player2 = allCharacters.get(hold);
+          currTeamChoice++;
+          delay(100);
+        } else if (currTeamChoice == 3) {
+          player3 = allCharacters.get(hold);
+          currTeamChoice++;
+          delay(100);
+        } else if (currTeamChoice == 4) {
+          player4 = allCharacters.get(hold);
+          currTeamChoice = 1;
+          characMenu = false;
+          mainMenu = true;
+          delay(100);
+        }
+      }
+      delay(1000);
+    }
+  } else {
     background(15, 135, 71);
     _Map.refresh();
     selectPlayer();

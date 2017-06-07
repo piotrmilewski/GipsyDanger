@@ -465,6 +465,6 @@ public class Heroes {
 
 
   String toString() {
-    return "1."
+    return name + ": lvl=" + lvl + ", hp=" + hpCap + ", str=" + str + ", def=" + def + ", res=" + res + ", mag=" + mag + ", skill=" + skill + ", speed=" + speed + ", luck=" + luck; 
   }
 }

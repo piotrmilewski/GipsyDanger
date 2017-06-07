@@ -31,17 +31,41 @@ public class Map {
     text("3. Leave Game", 250, 400);
   }
 
-  void waveSelection(){
+  void waveSelection() {
     background(0);
     textSize(22);
     fill(255);
-   for (int i = 1; i <= currAvailWaves + 1; i++){
-     text(i + ". Trial " + i, 350, 200 + (10 * i));
-   }
+    for (int i = 1; i <= currAvailWaves + 1; i++) {
+      text(i + ". Trial " + i, 350, 200 + (10 * i));
+    }
   }
-  
-  void characSelection() {
-    
+
+  void characSelection(int teamMate) {  
+    background(0);
+    textSize(19);
+    fill(255);
+    //Current Team
+    text("Current Team (please make sure team is full before leaving):", 10, 50);
+    text("1. " + player1, 10, 80);
+    text("2. " + player2, 10, 120);
+    text("3. " + player3, 10, 160);
+    text("4. " + player4, 10, 200);
+    //Available characters
+    text("Available Characters:", 10, 300);
+    text("1. " + allCharacters.get(1), 10, 330);
+    text("2. " + allCharacters.get(2), 10, 360);
+    text("3. " + allCharacters.get(3), 10, 390);
+    text("4. " + allCharacters.get(4), 10, 420);
+    text("5. " + allCharacters.get(5), 10, 450);
+    text("6. " + allCharacters.get(6), 10, 480);
+    text("7. " + allCharacters.get(7), 10, 510);
+    text("8. " + allCharacters.get(8), 10, 540);
+    text("9. " + allCharacters.get(9), 10, 570);
+    text("10. " + allCharacters.get(10), 10, 600);
+    //Prompt
+    text("Please select teammate: ", 10, 700);
+    text(teamMate, 10, 725);
+    text("Press '0' to go back", 10, 775);
   }
 
   void refresh() { //rename to refresh after adding to Woo
@@ -120,7 +144,7 @@ public class Map {
       //weapon containment
       int constant = 0;
       Weapon temp;
-      for (Iterator<Weapon> itr = (curPlayer._weapons).iterator(); itr.hasNext();){
+      for (Iterator<Weapon> itr = (curPlayer._weapons).iterator(); itr.hasNext(); ) {
         temp = itr.next();
         text(temp.getName(), 410, 560 + constant);
         text(temp.getDurability(), 740, 560 + constant);
